@@ -118,22 +118,21 @@ Spring은 IOC 기반의 프레임워크이다. IOC는 `Inversion of Control`의 
 - 유연한 코드를 작성할 수 있게 하여 가독성 및 코드 중복, 유지 보수를 편하게 할 수 있음. 
 
 원래 객체는 다음과 같은 순서로 만들어지지만
-`	
+
 1. 객체 생성
 2. 의존성 객체 생성 (클래스 내부에서 생성)
 3. 의존성 객체 메소드 호출
-`
+
 
 Spring에서는 IoC를 통해 아래와 같은 순서로 생성된다. 
-`
+
 1. 객체 생성
 2. 의존성 객체 주입 (스스로가 만드는것이 아니라 제어권을 스프링에게 위임하여 스프링이 만들어놓은 객체를 주입한다.)
 3. 의존성 객체 메소드 호출
 
-`
 위 내용으로 보아, Spring이 모든 의존성 객체를 스프링이 실행될때 다 만들어주고 필요한곳에 주입시켜줌으로써 *Bean들은 싱글턴 패턴의 특징을 가지며, 그 자체가 구조를 설계 할 수 있도록 만들어졌음을 알 수 있다. (하지만, 대부분 프레임워크에서 IoC를 적용하기 때문에 스프링을 IoC 컨테이너라고만 해서는 스프링을 정확히 정의할 수 없다.)
 
-** Bean
+\* Bean
 Bean은 Spring Bean Container에 존재하는 객체를 말한다. Bean Container는 의존성 주입을 통해 Bean 객체를 사용할 수 있도록 해준다. Bean은 보통 싱글턴으로 존재한다. Beans는 우리가 컨테이너에 공급하는 설정 메타 데이터(XML 파일)에 의해 생성된다.
 
 ### 1-2. 의존성 주입 (DI)
@@ -175,11 +174,14 @@ AOP는 Aspect Oriented Programming의 약자로 관점 지향 프로그래밍이
 - 공통기능을 한 곳에 보관함으로써 공통 기능 하나의 수정으로 모든 핵심기능들의 공통기능을 수정 할 수 있다. -> 효율적인 유지보수가 가능하며 재활용성이 극대화된다.
 
 참고한 블로그
-https://mangkyu.tistory.com/150 [MangKyu's Diary:티스토리]
-https://khj93.tistory.com/entry/Spring-Spring-Framework%EB%9E%80-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90-%ED%95%B5%EC%8B%AC-%EC%A0%95%EB%A6%AC
-https://leveloper.tistory.com/33 [꾸준하게:티스토리]
-출처: https://engkimbs.tistory.com/746 [새로비:티스토리]
-
+<br>
+[MangKyu's Diary:티스토리](https://mangkyu.tistory.com/150)
+<br>
+[Spring Framework란? 기본 개념 핵심 정리](https://khj93.tistory.com/entry/Spring-Spring-Framework%EB%9E%80-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90-%ED%95%B5%EC%8B%AC-%EC%A0%95%EB%A6%AC)
+<br>
+[스프링 AOP (Spring AOP) 총정리](https://engkimbs.tistory.com/746)
+<br>
+[스프링 정리](https://leveloper.tistory.com/33)
 
 ## #5. 스프링 프레임워크 외에 다른 프레임워크 ( 노드, 장고 등 ) 와의 차별점이 무엇일까
 - spring security, spring jdbc과 같은 수많은 검증된 라이브러리들이 있다.
