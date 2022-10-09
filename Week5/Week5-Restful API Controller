@@ -1,0 +1,13 @@
+# [백엔드 스터디 in 큐시즘 - D조] Week 5: 스프링의 전반적인 이해
+## #2. 스프링에서 Restful API개발을 위해 지원하는 것은 무엇이 있고, 그 특징은 어떠한가
+
+- @RestController는 기존의 @Controller와 @ResponseBody 어노테이션을 함께 사용한 것과 같다. 
+- 컨트롤러 REST 네 가지 주요 메소드 - GET, PUT, DELETE, POST. PATCH 는 스프링 3.2 이상
+- @PathVariable 파라미터화된 URL(경로의 일부분에 변수 입력이 있는 URL)에 대한 요청을 처리.
+- @RequestMapping("/dog/{name}")
+public String dog(@PathVariable String name) {
+XML, JSON, Atom, RSS 등 다양한 방식으로 표현. 스프링의 뷰와 뷰 리졸버를 이용
+- 클라이언트에 대한 가장 적합한 표현은 새로운 ContentNegotiatingViewRsolver를 이용해 선택
+@ReponseBody 애너테이션, 다양한 HttpMessageConverter 로 뷰 기반 렌더링 무시
+- 마찬가지로 새로운 @RequestBody 애너테이션은 HttpMethodConverter 구현체와 함께 인바운드 HTTP 데이터를 컨트롤러의 핸들러 메소드에 전달하는 자바 객체로 변환
+- RestTemplate은 클라이언트 측의 REST 리소스 사용을 간소화
